@@ -153,6 +153,9 @@ var i = 63;
 		}
 		//display Game Over
 		function showOver(){
-			document.getElementById("box").innerHTML='<h2 class="gameover">Game Over</h2>'
+			document.getElementById("box").innerHTML=`<div class='gm'><h2 class="gameover">Game Over</h2> <h3>Your final score is ${arrofbody.length}</h3><button id='reset'>Play Again</button></div>`
+			document.getElementById('reset').addEventListener("click",()=>{
+				location.reload()
+			})
 			stop()
 		}
